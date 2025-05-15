@@ -12,17 +12,20 @@ const links = [
 const Navbar = () => {
 
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
-            <div className="container-fluid">
-                <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul className="navbar-nav ">
-                        {links.map((link, index) => {
-                            return <li key={index} className="nav-item me-4"> <NavLink to={link.path}>{link.label}</NavLink></li>
-                        })}
-                    </ul>
+        <header>
+            <nav className="navbar navbar-expand-lg my-pd navbar-orange">
+                <div className="container-fluid ">
+                    <div className="collapse navbar-collapse " id="navbarNavDropdown">
+                        <ul className="navbar-nav ">
+                            {links.map((link, index) => {
+                                return <li key={index} className="nav-item me-4"> <NavLink className="custom-link" to={link.path}>{link.label}</NavLink></li>
+                            })}
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
+
     )
 }
 

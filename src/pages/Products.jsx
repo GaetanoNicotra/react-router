@@ -21,7 +21,7 @@ const Products = () => {
         <>
             <Navbar />
             <div className="container">
-                <h1 className='mb-4' >LISTA PRODOTTI</h1>
+                <h1 className='mb-4 mt-5' >LISTA PRODOTTI</h1>
                 <div className="row">
                     {products.map((product) => {
                         return (
@@ -29,12 +29,12 @@ const Products = () => {
                                 <img src={product.image} className="card-img-top" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">{product.name}</h5>
-                                    <p className="card-text">{product.ingredients.join(',')}</p>
+                                    <p className="card-text mt-2"> <p><strong><em>Ingredients</em></strong></p>{product.ingredients.join(',')}</p>
                                 </div>
                                 <ul className="list-group list-group-flush">
-                                    <li className="list-group-item"> {product.difficulty}</li>
-                                    <li className="list-group-item">{product.cuisine}</li>
-                                    <li className="list-group-item">A third item</li>
+                                    <li className="list-group-item"> <p><strong><em>Difficulty</em></strong></p>{product.difficulty}</li>
+                                    <li className="list-group-item"> <p><strong><em>Cuisine</em></strong></p>{product.cuisine}</li>
+                                    <li className="list-group-item"> <p><strong><em>Calories</em></strong></p>{product.caloriesPerServing}</li>
                                 </ul>
                             </div>
                         );

@@ -1,0 +1,26 @@
+/* UTILITIES */
+.my-pd {
+  padding: 35px;
+}
+
+.navbar-orange {
+  background-color: rgba(245, 171, 33, 0.712);
+}
+
+/* LINK */
+.custom-link {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.custom-link:hover {
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(155, 150, 150);
+}
+
+.custom-link.active {
+  font-weight: 600;
+  color: rgb(155, 150, 150);
+}
