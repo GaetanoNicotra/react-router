@@ -1,10 +1,34 @@
 import React from 'react'
-
+import { NavLink } from 'react-router-dom'
 const Products = () => {
     return (
-        <div>
-            <h2>PRODOTTI</h2>
-        </div>
+        <>
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+                <div className="container-fluid">
+                    <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul className="navbar-nav">
+                            <li className="nav-item ">
+                                <NavLink to='/'>HOMEPAGE</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink to='/about'>ABOUT</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink to='/contacts'>CONTACTS</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink to='/products'>PRODUCTS</NavLink>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div>
+                <h2>PRODOTTI</h2>
+            </div>
+        </>
+
     )
 }
 
