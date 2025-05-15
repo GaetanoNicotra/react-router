@@ -19,16 +19,6 @@ const Navbar = () => {
                         {links.map((link, index) => {
                             return <li key={index} className="nav-item me-4"> <NavLink to={link.path}>{link.label}</NavLink></li>
                         })}
-
-                        {/* <li className="nav-item me-4">
-                            <NavLink to='/about'>ABOUT</NavLink>
-                        </li>
-                        <li className="nav-item me-4">
-                            <NavLink to='/contacts'>CONTACTS</NavLink>
-                        </li>
-                        <li className="nav-item me-4">
-                            <NavLink to='/products'>PRODUCTS</NavLink>
-                        </li> */}
                     </ul>
                 </div>
             </div>
