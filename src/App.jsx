@@ -4,9 +4,8 @@ import Homepage from './pages/Homepage'
 import About from './pages/About'
 import Contacts from './pages/contacts'
 import Products from './pages/Products'
-import prodotti from './pages/prodotti'
 import DetailProduct from './pages/prodotti/DetailProduct'
-
+import Prodotti from './pages/Prodotti'
 function App() {
 
   const [currentPage, setCurrentPage] = useState('Home')
@@ -21,7 +20,7 @@ function App() {
 
           <Route path="/products">
             <Route path="" component={Products} />
-            <Route path="/:id" component={DetailProduct} />
+            <Route path=":id" component={DetailProduct} />
           </Route>
 
         </Routes>
