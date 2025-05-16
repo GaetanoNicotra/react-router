@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -8,7 +8,8 @@ import Navbar from '../../components/Navbar';
 const DetailProduct = () => {
     const params = useParams();
     const id = params.id
-    console.log(params)
+
+    const navigate = useNavigate();
 
     const [product, setProduct] = useState({})
 
@@ -28,21 +29,27 @@ const DetailProduct = () => {
             <h1 className='mt-5'>DETTAGLIO DEL PRODOTTO:</h1>
             <div className="container">
                 <div className="row mt-5">
-                    <div className="col-4">
+                    <div className="col-4 ">
                         <div className="card">
                             <img src={product.image} className="card-img-top" alt="..." />
                         </div>
                     </div>
                     <div className=" col-6 d-flex">
                         <div className="card-body">
-                            <h5 className="card-title"><strong>{product.name}</strong></h5>
-                            <div className="card-text mt-3"> <p><strong><em>Ingredients</em></strong></p>{product.ingredients}</div>
-                            <div className="card-text mt-3"><p><strong><em>Instruction</em></strong></p>{product.instructions}</div>
+                            <ul className='list-group '>
+                                <li className='list-group-item'> <h5 className="card-title text-center"><strong>{product.name}</strong></h5></li>
+                                <li className='list-group-item'><div className="card-text mt-3"> <p><strong><em>Ingredients</em></strong></p>{product.ingredients}</div></li>
+                                <li className='list-group-item'> <div className="card-text mt-3"><p><strong><em>Instruction</em></strong></p>{product.instructions}</div></li>
+                            </ul>
+
                         </div>
-                        <ul className="list-group list-group-flush">
-                            <li className="list-group-item"> <p><strong><em>Difficulty</em></strong></p>{product.difficulty}</li>
-                            <li className="list-group-item"> <p><strong><em>Cuisine</em></strong></p>{product.cuisine}</li>
-                            <li className="list-group-item"> <p><strong><em>Calories</em></strong></p>{product.caloriesPerServing}</li>
+                        <ul className="list-group-flush">
+                            <li className="list-group-item mb-3 mt-1"> <p><strong><em>Difficulty</em></strong></p>{product.difficulty}</li>
+                            <li className="list-group-item mb-3 mt-1"> <p><strong><em>Cuisine</em></strong></p>{product.cuisine}</li>
+                            <li className="list-group-item mb-3 mt-1"> <p><strong><em>Calories</em></strong></p>{product.caloriesPerServing}</li>
+                            <li className="list-group-item mb-3 mt-1"> <p><strong><em>Prep time</em></strong></p>{product.prepTimeMinutes}</li>
+                            <li className="list-group-item mb-3 mt-1"> <p><strong><em>Cook Time</em></strong></p>{product.cookTimeMinutes}</li>
+                            <button onClick={() => { navigate(-1) }} className='btn btn-primary'>Torna indietro</button>
                         </ul>
                     </div>
                 </div>

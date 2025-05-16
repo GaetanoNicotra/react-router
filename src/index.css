@@ -25,6 +25,16 @@
   color: rgb(155, 150, 150);
 }
 
+.product-link {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.product-link:hover {
+  color: rgb(180, 9, 9);
+
+}
+
 /* LOADER */
 .loader {
   display: block;
