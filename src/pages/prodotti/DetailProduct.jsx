@@ -4,6 +4,8 @@ import { useParams } from 'react-router-dom'
 
 const DetailProduct = () => {
     const params = useParams();
+    const id = params.id
+    console.log(params)
     return (
         <div>
             <h1>DETTAGLIO DEL PRODOTTO:</h1>

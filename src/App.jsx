@@ -16,12 +16,9 @@ function App() {
           <Route path="/" Component={Homepage} ></Route>
           <Route path="/about" Component={About} ></Route>
           <Route path="/contacts" Component={Contacts} ></Route>
-
-          <Route path="/products">
-            <Route path="" component={Prodotti} />
-            <Route path=":id" component={DetailProduct} />
+          <Route path="/products" element={<Prodotti />}>
+            <Route path=":id" element={DetailProduct} />
           </Route>
-
         </Routes>
       </BrowserRouter>
     </>
