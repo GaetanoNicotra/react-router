@@ -30,11 +30,6 @@
   transition: 0.3s;
 }
 
-.product-link:hover {
-  color: rgb(180, 9, 9);
-
-}
-
 /* LOADER */
 .loader {
   display: block;
